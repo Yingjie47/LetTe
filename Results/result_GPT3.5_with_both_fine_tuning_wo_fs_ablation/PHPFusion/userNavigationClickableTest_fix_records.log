@@ -1,0 +1,267 @@
+2024-09-16 12:41:31,797:INFO:The problem is most likely a locator error, start fixing the test cases......
+2024-09-16 12:41:35,888:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:41:35,896:INFO:New element info extracted:
+1. "Message" xpath="//*[@id="shout_message"]"
+2. "Smileys" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[1]"
+3. "Displays selected text as bold" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[2]"
+4. "Makes selected text underlined" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[3]"
+5. "Makes a URL clickable" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[4]"
+6. "Save shout" xpath="//*[@id="shout_box"]"
+2024-09-16 12:41:38,564:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:41:38,565:INFO:New element info checked:
+1. "Message" xpath="//*[@id="shout_message"]"
+2. "Smileys" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[1]"
+3. "Displays selected text as bold" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[2]"
+4. "Makes selected text underlined" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[3]"
+5. "Makes a URL clickable" xpath="//*[@id="shout_message-field"]/div/div/div/div/div/div/div/button[4]"
+6. "Save shout" xpath="//*[@id="shout_box"]"
+2024-09-16 12:41:40,368:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:41:40,370:INFO:Old element info extracted:
+1. (Message input box)
+   xpath="//*[@id="shout_message"]"
+2. "Send Message" xpath="//*[@id="shout_box"]"
+2024-09-16 12:41:43,257:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:41:43,259:INFO:Old element info checked:
+1. (Message input box) xpath="//*[@id="shout_message"]"
+2. "Send Message" xpath="//*[@id="shout_box"]"
+2024-09-16 12:41:49,026:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:41:49,186:INFO:Cause of failure 1 generated:
+Comparing the major elements of the old and new versions, we can see that the "Send Message" element from the old version has been replaced with multiple new elements in the new version, such as "Smileys," "Displays selected text as bold," "Makes selected text underlined," "Makes a URL clickable," and "Save shout." The most notable change is the addition of these new elements in the message input box area.
+
+Given the error message provided, the root cause of the test case failure is likely due to the removal of the original "Send Message" element, which had the xpath "//*[@id="shout_box"]." This removal resulted in the test case trying to locate an element with the xpath "//*[@id="ddlink13"]," which does not exist in either the old or new version.
+
+Other reasons for the test case failure could be:
+1. Changes in the structure of the webpage: The introduction of new elements may have altered the structure of the webpage, causing the test case to fail in locating the expected elements.
+2. Changes in the functionality: The addition of new features like smileys and text formatting buttons may have affected the functionality of the message input box, leading to test case failures.
+3. Changes in the element locators: If the locators for existing elements were also modified, the test case would fail to locate those elements, resulting in failures.
+
+To address the test case failure, you should update the test case to reflect the changes in the new version. Specifically, you need to update the element locators and interactions to include the new elements introduced in the message input box area. Additionally, ensure that the test case is robust enough to handle changes in the structure and functionality of the webpage to prevent future failures.
+2024-09-16 12:42:04,644:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-16 12:42:04,795:INFO:The testcase 1-1 is generated:
+According to the possible causes of test failure you provided, the new version of the HTML added elements in the area where the "Send Message" element is located, which can be seen from the new version of the HTML.
+By reading the new version of the HTML, you can find that there are similar elements, such as smileys, and there are also many new ones, such as bold, underline, etc., so it is not entirely accurate to say that the "Send Message" element has been removed.
+Also, by looking at the new version of the HTML, you can't find any elements with the xpath "//*[@id="ddlink13"]" which is mentioned in the error message. But you can find an element with a similar id called "ddlink8", which is in the navigation area, and corresponds to the "Discussion Forum" element. The other elements with the same xpath in the error message could not be found in the new version of the HTML.
+So to fix the test case, you can delete the lines of code in the test case that contain the xpath mentioned in the error message.
+In order to better reflect the intent of the original test, you should also delete the line of code in the test case that contains the xpath "//*[@id="ddlink13"]" element, and add a line of code that clicks on the "Discussion Forum" element.
+In addition, based on the understanding of the possible reasons for the failure of the test, the subsequent test steps are likely to have to be changed due to changes in the structure of the new version of the HTML, so you should also pay attention to potential failures in these steps.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/PHPFusion-9.10.30/")
+driver.find_element(By.XPATH, '(//*[@name="user_name"])[2]').send_keys("admin")
+driver.find_element(By.XPATH, '(//*[@name="user_pass"])[2]').send_keys("admin123")
+driver.find_element(By.XPATH, '//*[@id="login"]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[8]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="nav_ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="nav_menu-8"]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[10]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[3]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '(//a[contains(text(),"Logout")])[2]').click()
+driver.close()
+2024-09-16 12:42:04,795:INFO:The testcase 1-2 is generated:
+Based on the possible reasons for test failure and the new version of HTML, we can see that the "Send Message" element in the old version of the HTML corresponds to the "Save shout" element in the new version of HTML. However, the xpath in the error message is "//*[@id="ddlink13"]", which is not consistent with the xpath "//*[@id="shout_box"]" for the "Send Message" element.
+In the new version of HTML, there is indeed no element with an id attribute of "ddlink13", but there is an element with an id attribute of "ddlink8", which is similar to the error message. However, this still does not match the xpath in the test case, which is "//*[@id="ddlink13"]", because the xpath in the error message has an extra "13".
+Therefore, in order to fix the test case, you need to change "//*[@id="ddlink13"]" in the test case to "//*[@id="ddlink8"]".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/PHPFusion-9.10.30/")
+driver.find_element(By.XPATH, '(//*[@name="user_name"])[2]').send_keys("admin")
+driver.find_element(By.XPATH, '(//*[@name="user_pass"])[2]').send_keys("admin123")
+driver.find_element(By.XPATH, '//*[@id="login"]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[8]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[10]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[3]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '(//a[contains(text(),"Logout")])[2]').click()
+driver.close()
+2024-09-16 12:42:04,795:INFO:The testcase 1-3 is generated:
+By understanding the possible reasons for the test failure and the provided new version of the HTML, it can be seen that the "Send Message" element in the new version has been replaced by a "Save shout" element.
+At the same time, it can be seen from the error message that the xpath is indeed "//*[@id="ddlink13"]" and there is no such element in the new version of the HTML.
+By looking at the new version of the HTML, you can see that there is an element with the xpath "//*[@id="ddlink8"]" and there is an element with the xpath "//*[@id="nav_ddlink8"]" which are similar in name to the xpath in the error message.
+By inferring from the test case, since the "Send Message" element has been replaced by the "Save shout" element, the xpath containing "//*[@id="ddlink13"]" in the test case should also be related to the "Send Message" element, and therefore, it can be inferred that it should be a <a> tag element.
+So, in order to fix the test case, you need to delete the line of code containing "//*[@id="ddlink13"]" and its subsequent line of code.
+And based on the analysis of possible reasons for the failure, the xpath of the subsequent test case lines may also have a relationship with the "Send Message" element, so it is likely that the subsequent line of code needs to be deleted as well.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/PHPFusion-9.10.30/")
+driver.find_element(By.XPATH, '(//*[@name="user_name"])[2]').send_keys("admin")
+driver.find_element(By.XPATH, '(//*[@name="user_pass"])[2]').send_keys("admin123")
+driver.find_element(By.XPATH, '//*[@id="login"]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[8]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink8"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-8"]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[10]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[3]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '(//a[contains(text(),"Logout")])[2]').click()
+driver.close()
+2024-09-16 12:42:04,796:INFO:The testcase 1-4 is generated:
+By analyzing the possible causes of test failure, it can be understood that the root cause of test failure is that the "Send Message" element has been removed, which is confirmed by the new version of the HTML content that there is no element with an id of "shout_box".
+In addition, by looking at the new HTML content, you can see that there is a "Shoutbox" element, and a "Save shout" element inside it, and the id is "shout_box", which is very similar to the "Send Message" element. This is the only one element that has a high similarity to the "Send Message" element in the new version of the HTML, so I believe that is the element that has replaced the original "Send Message" element.
+Therefore, to fix the test case you need to replace "//*[@id="ddlink13"]" with "//*[@id="shout_box"]".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/PHPFusion-9.10.30/")
+driver.find_element(By.XPATH, '(//*[@name="user_name"])[2]').send_keys("admin")
+driver.find_element(By.XPATH, '(//*[@name="user_pass"])[2]').send_keys("admin123")
+driver.find_element(By.XPATH, '//*[@id="login"]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[8]/a').click()
+driver.find_element(By.XPATH, '//*[@id="ddlink13"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[10]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[3]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '(//a[contains(text(),"Logout")])[2]').click()
+driver.close()
+2024-09-16 12:42:04,796:INFO:The testcase 1-5 is generated:
+In order to fix the test case, you must first understand that the root cause of the failure was the inability to find the "Send Message" element in the new version of the page.
+By looking up the xpath "//*[@id="ddlink13"]" in the new version of the HTML, you can find the xpath "//*[@id="ddlink13"]" which is semantically similar to the error message and has a high probability of being the same element.
+To fix the test case, the part "//*[@id="ddlink13"]" in the test case needs to be replaced with a more accurate xpath, and the most likely xpath to replace it with is "//*[@id="shout_box"]".
+At the same time, by understanding the reported error message and the possible reasons for test failure, we can see that the introduction of new elements in the "Send Message" part will not affect the existence of the "Send Message" element. At the same time, the xpath "//*[@id="shout_box"]" still exists in the new HTML version of the xpath, and its element text content is "Send Message" in the old version, and "Save shout" in the new version, so the previous test case is to send a click on the "Send Message" button action.
+So in order to fix the test case, you should change "//*[@id="ddlink13"]" in the original test case to "//*[@id="shout_box"]".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/PHPFusion-9.10.30/")
+driver.find_element(By.XPATH, '(//*[@name="user_name"])[2]').send_keys("admin")
+driver.find_element(By.XPATH, '(//*[@name="user_pass"])[2]').send_keys("admin123")
+driver.find_element(By.XPATH, '//*[@id="login"]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[8]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[4]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[5]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[6]/a').click()
+driver.find_element(By.XPATH, '//*[@id="shout_box"]').click()
+driver.find_element(By.XPATH, '//*[@id="menu-13"]/li[7]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-menu_menu"]/ul[2]/li[10]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[2]/a').click()
+driver.find_element(By.XPATH, '//*[@id="user-menu"]').click()
+driver.find_element(By.XPATH, '//*[@id="user-info"]/ul/li[3]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '(//a[contains(text(),"Logout")])[2]').click()
+driver.close()

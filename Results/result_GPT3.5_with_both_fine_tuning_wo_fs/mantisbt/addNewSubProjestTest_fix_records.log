@@ -1,0 +1,509 @@
+2024-04-09 22:48:20,873:INFO:The problem is most likely a locator error, start fixing the test cases......
+2024-04-09 22:48:32,934:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:48:32,951:INFO:New element info extracted:
+1. "项目名称" xpath="//*[@id="project-name"]"
+2. "状态" xpath="//*[@id="project-status"]"
+3. "已启用" xpath="//*[@id="project-enabled"]"
+4. "继承全域分类" xpath="//*[@id="project-inherit-global"]"
+5. "查看权限" xpath="//*[@id="project-view-state"]"
+6. "描述" xpath="//*[@id="project-description"]"
+7. "更新项目" xpath="//*[@id="manage-proj-update-form"]/div/div[3]/button[1]"
+8. "删除项目" xpath="//*[@id="manage-proj-update-form"]/div/div[3]/button[2]"
+9. (添加为子项目 - selection box) xpath="//*[@id="manage-project-subproject-add-form"]/fieldset/select"
+   (添加为子项目 - button) xpath="//*[@id="manage-project-subproject-add-form"]/fieldset/button"
+10. "新建子项目" xpath="//*[@id="manage-project-subproject-add-form"]/fieldset/form/button"
+11. (分类 - "从该项目复制分类" button) xpath="//*[@id="manage-project-category-copy-form"]/fieldset/button[1]"
+    (分类 - "复制分类到该项目" button) xpath="//*[@id="manage-project-category-copy-form"]/fieldset/button[2]"
+   (分类 - "Exclude inherited categories" checkbox) xpath="//*[@id="exclude_inherited"]"
+12. (分类 - "添加分类" button) xpath="//*[@id="project-add-category-form"]/fieldset/button[1]"
+    (分类 - "添加和编辑分类" button) xpath="//*[@id="project-add-category-form"]/fieldset/button[2]"
+13. (版本 - "从该项目复制版本号" button) xpath="//*[@id="manage-project-version-copy-form"]/fieldset/button[1]"
+    (版本 - "复制版本号到该项目" button) xpath="//*[@id="manage-project-version-copy-form"]/fieldset/button[2]"
+14. (版本 - "添加版本" input box) xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[2]"
+    (版本 - "添加版本" button) xpath="//*[@id="manage-project-add-version-form"]/fieldset/button[1]"
+    (版本 - "添加并编辑版本" button) xpath="//*[@id="manage-project-add-version-form"]/fieldset/button[2]"
+15. "添加用户至项目"-(用户名 selection box) xpath="//*[@id="project-add-users-username"]"
+    "操作权限"-(操作权限 selection box) xpath="//*[@id="project-add-users-access-level"]"
+    "添加用户" xpath="//*[@id="manage-project-add-user-form"]/div/div[3]/button"
+2024-04-09 22:48:46,135:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:48:46,140:INFO:New element info checked:
+1. "项目名称" xpath="//*[@id="project-name"]"
+2. "状态" xpath="//*[@id="project-status"]"
+3. "已启用" xpath="//*[@id="project-enabled"]"
+4. "继承全域分类" xpath="//*[@id="project-inherit-global"]"
+5. "查看权限" xpath="//*[@id="project-view-state"]"
+6. "描述" xpath="//*[@id="project-description"]"
+7. "更新项目" xpath="//*[@id="manage-proj-update-form"]/div/button[1]"
+8. "删除项目" xpath="//*[@id="manage-proj-update-form"]/div/button[2]"
+9. (添加为子项目 - selection box) xpath="//*[@id="manage-project-subproject-add-form"]/fieldset/select"
+   (添加为子项目 - button) xpath="//*[@id="manage-project-subproject-add-form"]/fieldset/button"
+10. "新建子项目" xpath="//*[@id="manage-project-subproject-add-form"]/form/button"
+11. (分类 - "从该项目复制分类" button) xpath="//*[@id="manage-project-category-copy-form"]/fieldset/button[1]"
+    (分类 - "复制分类到该项目" button) xpath="//*[@id="manage-project-category-copy-form"]/fieldset/button[2]"
+   (分类 - "Exclude inherited categories" checkbox) xpath="//*[@id="exclude_inherited"]"
+12. (分类 - "添加分类" button) xpath="//*[@id="project-add-category-form"]/fieldset/button[1]"
+    (分类 - "添加和编辑分类" button) xpath="//*[@id="project-add-category-form"]/fieldset/button[2]"
+13. (版本 - "从该项目复制版本号" button) xpath="//*[@id="manage-project-version-copy-form"]/fieldset/button[1]"
+    (版本 - "复制版本号到该项目" button) xpath="//*[@id="manage-project-version-copy-form"]/fieldset/button[2]"
+14. (版本 - "添加版本" input box) xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[2]"
+    (版本 - "添加版本" button) xpath="//*[@id="manage-project-add-version-form"]/fieldset/button[1]"
+    (版本 - "添加并编辑版本" button) xpath="//*[@id="manage-project-add-version-form"]/fieldset/button[2]"
+15. "添加用户至项目"-(用户名 selection box) xpath="//*[@id="project-add-users-username"]"
+    "操作权限"-(操作权限 selection box) xpath="//*[@id="project-add-users-access-level"]"
+    "添加用户" xpath="//*[@id="manage-project-add-user-form"]/div/div[3]/button"
+2024-04-09 22:48:54,746:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:48:54,751:INFO:Old element info extracted:
+1. "更新项目" xpath="//*[@id="manage-proj-update-form"]/div/div[3]/input"
+2. "删除项目" xpath="//*[@id="project-delete-form"]/fieldset/input[3]"
+3. "新建子项目" xpath="//*[@id="manage-project-update-subprojects-div"]/div/form/fieldset/button"
+4. "添加为子项目" xpath="//*[@id="manage-project-subproject-add-form"]/div/div/fieldset/input[3]"
+5. "从该项目复制分类" xpath="//*[@id="manage-project-category-copy-form"]/fieldset/input[4]"
+6. "复制分类到该项目" xpath="//*[@id="manage-project-category-copy-form"]/fieldset/input[5]"
+7. "添加分类" xpath="//*[@id="project-add-category-form"]/fieldset/input[4]"
+8. "添加和编辑分类" xpath="//*[@id="project-add-category-form"]/fieldset/input[5]"
+9. "从该项目复制版本号" xpath="//*[@id="manage-project-version-copy-form"]/fieldset/input[4]"
+10. "复制版本号到该项目" xpath="//*[@id="manage-project-version-copy-form"]/fieldset/input[5]"
+11. "添加版本" xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[4]"
+12. "添加并编辑版本" xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[5]"
+13. "显示有全域权限的用户" xpath="//*[@id="manage-project-users-div"]/div[2]/form/fieldset/button"
+14. "添加用户至项目"-"用户名" xpath="//*[@id="project-add-users-username"]"
+    "添加用户至项目"-"操作权限" xpath="//*[@id="project-add-users-access-level"]"
+    "添加用户至项目"-"添加用户" xpath="//*[@id="manage-project-add-user-form"]/div/div[3]/input"
+2024-04-09 22:49:04,027:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:49:04,032:INFO:Old element info checked:
+1. "更新项目" xpath="//*[@id="manage-proj-update-form"]/div/div[3]/input"
+2. "删除项目" xpath="//*[@id="project-delete-form"]/fieldset/input[3]"
+3. "新建子项目" xpath="//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button"
+4. "添加为子项目" xpath="//*[@id="manage-project-subproject-add-form"]/div/div/fieldset/input[3]"
+5. "从该项目复制分类" xpath="//*[@id="manage-project-category-copy-form"]/fieldset/input[4]"
+6. "复制分类到该项目" xpath="//*[@id="manage-project-category-copy-form"]/fieldset/input[5]"
+7. "添加分类" xpath="//*[@id="project-add-category-form"]/fieldset/input[4]"
+8. "添加和编辑分类" xpath="//*[@id="project-add-category-form"]/fieldset/input[5]"
+9. "从该项目复制版本号" xpath="//*[@id="manage-project-version-copy-form"]/fieldset/input[4]"
+10. "复制版本号到该项目" xpath="//*[@id="manage-project-version-copy-form"]/fieldset/input[5]"
+11. "添加版本" xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[4]"
+12. "添加并编辑版本" xpath="//*[@id="manage-project-add-version-form"]/fieldset/input[5]"
+13. "显示有全域权限的用户" xpath="//*[@id="manage-project-users-div"]/div[2]/form/fieldset/button"
+14. "添加用户至项目"-"用户名" xpath="//*[@id="project-add-users-username"]"
+    "添加用户至项目"-"操作权限" xpath="//*[@id="project-add-users-access-level"]"
+    "添加用户至项目"-"添加用户" xpath="//*[@id="manage-project-add-user-form"]/div/div[3]/input"
+2024-04-09 22:49:07,651:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:49:07,654:INFO:Intent of operations extracted:
+Based on the provided test case and the main elements of the page, the test case operation intent appears to be testing the functionality of adding a new subproject to a project within the web application being tested (presumably a project management or bug tracking system). 
+
+The test case navigates to the main page, logs in as an administrator, accesses the project management section, selects a specific project, and then proceeds to add a new subproject. The test inputs the name and description for the new subproject and confirms the addition. 
+
+Therefore, the test case operation intent is to verify the functionality of adding a new subproject to an existing project within the web application.
+2024-04-09 22:49:18,252:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:49:18,256:INFO:Cause of failure 1 generated:
+Comparing the major elements of the old and new versions, we can see that the main elements have been significantly restructured and some elements have been removed in the new version. 
+
+The error message indicates that the test case failed due to not being able to locate the element with the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" in the new version. This element was present in the old version but has been removed in the new version.
+
+Root Cause:
+The main reason for the test case failure is that the element "新建子项目" (New Subproject) button with the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" has been removed in the new version. This change in element structure caused the test case to fail as the script was looking for an element that no longer exists in the updated version.
+
+Other Reasons for Test Case Failure:
+1. Renaming of Elements: Some elements have been renamed in the new version, such as "更新项目" (Update Project) and "删除项目" (Delete Project), which may lead to failures if the script is searching for the old element names.
+2. Restructuring of Elements: The organization and hierarchy of elements have been changed in the new version, such as the addition of selection boxes for "添加为子项目" (Add as Subproject) and buttons for various actions in the category and version sections. This restructuring can cause the script to fail if it is not updated to reflect the changes.
+3. Different Action Buttons: In the new version, buttons are used for actions like adding categories, versions, and users, whereas in the old version, input fields were used. If the script is interacting with these elements, it needs to be modified to click the buttons instead of inputting values.
+
+In conclusion, the primary reason for the test case failure is the removal of the "新建子项目" button in the new version. However, other changes in element names, structures, and actions could also contribute to test failures and require adjustments in the test scripts to align with the updated application version.
+2024-04-09 22:49:35,203:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:49:35,209:INFO:The testcase 1-1 is generated:
+By understanding the possible causes of test failure, it can be concluded that the "新建子项目" (New Subproject) button was removed in the new version, but the error message showed that the element could not be found with xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button".
+However, the new version of the HTML code you provided clearly shows that there is a "新建子项目" button, and it's contained in a form whose xpath is "//*[@id="subprojects"]/div[2]/form[2]".
+The "New Subproject" button with the xpath in the test case is in the same form as the "Add as Subproject" button, so it can be understood as the latter.
+So to fix the test case you just need to change "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" to "//*[@id="subprojects"]/div[2]/form[2]/button[2]".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div[2]/div[2]/div/div[2]/form[2]/button[2]').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:49:35,209:INFO:The testcase 1-2 is generated:
+According to the new version of the HTML and the test case, the element with the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" does exist in the new version of the HTML, which is a "更新项目" button, not the "新建子项目" button.
+So, to fix the test case, you need to replace "新建子项目" with "更新项目" in the test case.
+At the same time, based on the understanding of the test intent, this test case is for the functionality of adding subprojects to the project. In the new version of the HTML there is a "新建子项目" button, and there are two new buttons next to it. These changes are likely to have a significant impact on the test case, but the test case does not contain any operations on these new buttons. To avoid potential future test failures, you should also review the subsequent test steps to see if there are any operations that are related to the new buttons.
+In addition, according to the new version of the HTML, there is a "添加版本" button in the "版本" section, which has a similar name to the "新建子项目" button and is also a new element in the new version of the HTML. This button may also have an impact on the test case.
+Based on the understanding of the test intent, it is known that the test case is to test the functionality of adding subprojects to the project. In the new version of the HTML, the "新建子项目" button and the "添加版本" button are in the same level of the hierarchy and are relatively close to each other, which means that there may be a possibility of confusion between the two actions of adding a subproject and adding a version when the test case is written.
+If this possibility exists, the test case needs to be changed to ensure that the correct test intent is maintained. If the possibility of confusion can be ruled out, then the change in the "添加版本" button can be ignored.
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+...
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+...
+
+In the new version of the HTML, there is no such element as "//*[@id="login-form"]/fieldset/input[2]" or "//*[@id="login-form"]/fieldset/input[3]", which are also in the test case.
+In the new version of the HTML, there is no such element as "//*[@id="manage-project-create-form"]/div/div[3]/input", which is also in the test case.
+2024-04-09 22:49:35,209:INFO:The testcase 1-3 is generated:
+According to the new version of the HTML and the error message, the element "新建子项目" (New Subproject) has not been removed, and the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" is still valid. So the root cause of the test case failure is not that the element was removed, but that it is not a button element, which is why the test case statement "driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()" failed.
+In the new version of the HTML, I found that there is a "新建子项目" element that is a button element, which can be found by the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/button".
+So, to fix the test case, you need to change "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" in the test code to "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/button".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:49:35,209:INFO:The testcase 1-4 is generated:
+Based on the analysis of the possible reasons for test failure, it is found that there are elements that have been renamed and restructured in the new version, which may lead to test failure. However, by checking the new version of the HTML, it was found that the "更新项目" button and the "删除项目" button mentioned in the analysis of the root cause are still present, so they are not the cause of the test failure.
+By examining the new version of the HTML, it was found that there is a button with the text "新建子项目" in the "子项目" section, which is similar to the description in the error message.
+In summary, it is the "New Subproject" button in the "Subprojects" section of the new version that has a very similar text to the one in the error message, and it is the real root cause of the test failure.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:49:35,209:INFO:The testcase 1-5 is generated:
+According to the new version of the HTML, the "New Subproject" button still exists, but it is not a submit button, so it is not the root cause of the error. The "Create Subproject" button is indeed a submit button and is located in the same place as in the test case. However, in the error message, the xpath is "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button", but in the test case, the xpath is "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button".
+So to fix the test case, change '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button' in the test case to '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button', which is the same as the xpath in the error message.
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:10,806:INFO:Cause of failure 2 generated:
+Based on the comparison of the major elements between the old and new versions, we can identify the following changes that may have caused the test case failure:
+
+1. The element "新建子项目" (New Subproject) with the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" from the old version is no longer present in the new version.
+
+Given the error message stating that the element with this xpath could not be located, it is highly likely that the removal of this element is the root cause of the test case failure. The test case seems to be trying to interact with the "新建子项目" button, which no longer exists in the new version, leading to the NoSuchElementException.
+
+Other reasons for the test case failure could be:
+- Changes in the structure of the page or elements, causing the xpath to become invalid.
+- Changes in the functionality or workflow of the application, rendering the test case obsolete.
+- Renaming or repositioning of elements, making them inaccessible through the provided xpaths.
+
+To address the test case failure, the test script needs to be updated to reflect the changes in the new version. The specific step related to interacting with the "新建子项目" button should be revised or removed to align with the current version of the application. Additionally, it is recommended to review and update any other test steps that may be impacted by the changes in the application to ensure the test case runs successfully.
+2024-04-09 22:50:23,280:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:50:23,303:INFO:The testcase 2-1 is generated:
+By analyzing the possible causes of test failure, it can be inferred that the "新建子项目" button element was removed in the new version, which is consistent with the understanding of the test case intent.
+In the new version of the HTML, the id of the form containing the "New Subproject" button is "manage-project-add-user-form".
+By understanding the test case, it is found that the test step is to click the "New Subproject" button and the following test step is to input the subproject name and description.
+So, the test step may be to click the "New Subproject" button, so you need to remove the corresponding line of code in the test case.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:23,303:INFO:The testcase 2-2 is generated:
+Based on the analysis of the possible causes of test failure, it can be concluded that the element "新建子项目" has been removed, which can be confirmed by checking the new version of the HTML.
+At the same time, it can be found in the new version of the HTML that there is still a "添加子项目" button with xpath "//*[@id="manage-project-subproject-add-form"]/fieldset/button", which is one of the candidates that may have been falsely recognized by the test case.
+So, in order to fix the test case, you need to change "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" to "//*[@id="manage-project-subproject-add-form"]/fieldset/button".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-subproject-add-form"]/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:23,303:INFO:The testcase 2-3 is generated:
+According to the new version of the HTML, it can be found that the "新建子项目" element still exists.
+The xpath of the element is "//*[@id="manage-project-add-user-form"]/div[1]/div[3]/button[1]" in the new version of the HTML, while in the error message, it is "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button".
+There is only a slight change in the xpath, but the change is still quite significant.
+Based on the understanding of the test intent, it can be inferred that the test case is to test whether the "新建子项目" button works or not, but it is not the main content of the test.
+So the test case should be changed to remove this step.
+At the same time, the xpath in the test case for the "更新项目" button is also incorrect, and there is a risk of causing a similar error in the next test step.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:23,303:INFO:The testcase 2-4 is generated:
+Based on the new HTML, I found that the "New Subproject" button is still there.
+It can be seen from the new HTML that, to the right of the "New Subproject" button, there is a "添加为子项目" (Add as Subproject) button. It is very likely that the former was replaced by the latter, so there may have been a change in the button text.
+To resolve the test failure, you can change the test case to use the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" to locate the element to "//*[@id="subprojects"]/div/form/button[1]".
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div/form/button[1]').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:23,303:INFO:The testcase 2-5 is generated:
+According to the analysis of the possible causes of test failure, in the new version of HTML you can find a "New Subproject" button that is very similar to the one mentioned in the error message. And looking at the xpath in the test case and the error message, the two xpaths are indeed very similar, so it is highly likely that this is the cause of the test failure.
+So to fix the test case, you just need to change the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" to "//*[@id="manage-project-add-user-form"]/div/button[1]".
+At the same time, based on the test intent, it can be assumed that the "New Subproject" button in the new version of HTML is to add a new subproject.
+By looking at the subsequent test code, it can be seen that after the line of code that fails, there is a line of code that tests the functionality of adding a new subproject, so the root cause of the error should be that the original line of test code is a mistake in intent.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:50:39,601:INFO:Cause of failure 3 generated:
+Comparing the major elements of the old and new versions, we can identify the following changes that could have led to the test case failure:
+
+1. The "新建子项目" button with the xpath "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" has been removed in the new version.
+2. The "添加为子项目" button in the new version has a different xpath compared to the old version.
+3. The structure for adding categories and versions has been reorganized with new elements and xpaths in the new version.
+4. The "添加用户" button in the new version has been changed from an input field to a button.
+
+Based on the error message provided, the root cause of the test case failure is the removal of the "新建子项目" button in the new version. The test case is trying to interact with an element that no longer exists in the updated version, leading to the "NoSuchElementException" error.
+
+Other reasons for the test case failure could include:
+- Changes in the xpaths of elements that were not mentioned in the error message but may have impacted the test case.
+- Structural changes in the layout of the web application leading to elements being repositioned or redesigned.
+- Changes in the functionality of elements that were not adequately tested in the updated version.
+
+To address the test case failure, the test script needs to be updated to interact with the new elements and xpaths in the new version of the web application. Specifically, the step related to interacting with the "新建子项目" button needs to be revised or removed from the test case script. Additionally, any other elements that have changed in the new version should be updated in the test script to ensure accurate test execution.
+2024-04-09 22:51:02,536:INFO:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-04-09 22:51:02,574:INFO:The testcase 3-1 is generated:
+According to the possible reasons for test failure you provided, it can be known that the "新建子项目" button was not removed, but there is a corresponding "新建版本" button in the new version of the HTML, which has a conflict with the xpath in the error message. In addition, the "添加为子项目" button can be found in the new HTML, and the "添加版本" and "添加用户" buttons are also present and can be found in the new HTML.
+By understanding the test intent and reading the new version of the HTML, it can be inferred that the possible test case is to test the adding of subprojects to a project. The "新建子项目" and "添加为子项目" buttons are both related to the operation of adding subprojects, and the "新建版本" and "添加用户" buttons are irrelevant to the test case. So the root cause of the test case failure is that the "新建子项目" button is not removed, but the xpath in the test case is wrong, and instead, the "添加为子项目" button should be clicked. 
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div[2]/form[2]/button').click()
+...
+
+By analyzing the new HTML, you can see that there is no "新建子项目" button and "添加为子项目" button in the test case, but there are two "新建子项目" and "添加为子项目" buttons in the new HTML, and the xpath is "//*[@id="subprojects"]/div[2]/form[2]/button" and "//*[@id="subprojects"]/div[2]/form[1]/button" respectively.
+The repaired test case you gave is to click the "新建子项目" button, which is not right. The test case should click the "添加为子项目" button.
+
+By understanding the test intent and reading the new version of the HTML, it can be inferred that the possible test case is to test the adding of subprojects to a project. The "新建子项目" and "添加为子项目" buttons are both related to the operation of adding subprojects, and the "新建版本" and "添加用户" buttons are irrelevant to the test case. So the root cause of the test case failure is that the "新建子项目" button is not removed, but the xpath in the test case is wrong, and instead, the "添加为子项目" button should be clicked.
+
+In the new version of HTML, you can see that there are several "新建子项目" and "添加为子项目" buttons, and the two pairs of buttons are in a parent-child relationship. The change in the test case is to change the xpath of the error message to the xpath of the "新建子项目" button, and this change is consistent with the understanding of the test intent.
+And the "添加用户" button in the test case does not exist in the new HTML, but there is a "添加用户至项目" in the test intent that can be found in the new HTML, which is more likely to be the target element for testing.
+The "添加版本" button is not related to the test intent of the test case, so it is not mentioned in the test case that needs to be repaired.
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div[2]/form[2]/button').click()
+...
+
+The repaired test case you provided is to click the "新建子项目" button, which is inconsistent with the test intent.
+2024-04-09 22:51:02,574:INFO:The testcase 3-2 is generated:
+By understanding the possible reasons for test failure, it is possible to determine that in the new version of the HTML, the "新建子项目" button and the "添加为子项目" button are indeed related to subprojects. However, in the new version of the HTML, the "新建子项目" button is in the "添加为子项目" button's form tag, and the xpath is "//*[@id="subprojects"]/div/form[2]/button" and the "添加为子项目" button's xpath is "//*[@id="subprojects"]/div/form[1]/button".
+At the same time, it is not difficult to find that there is a new "Add Category" button in the HTML that has nothing to do with the test intent of the test case.
+The test case has a line of code that interacts with the "Add User" button, but the new version of the HTML has no "Add User" button, and the only one that can be understood as a similar button is the "Add User" button that is very close to the "Add Category" button.
+So in order to fix the test case and be consistent with the test intent, you need to delete the test code line that interacts with the "Add Category" button and correct the xpath of the two subproject-related buttons and the "Add User" button to the new one.
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div/form[1]/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:51:02,574:INFO:The testcase 3-3 is generated:
+Based on the analysis of possible causes of test failure, it can be understood that the "新建子项目" button mentioned in the error message refers to the "添加为子项目" button in the new version of HTML, and the xpath is "//*[@id="subprojects"]/div/div[2]/form[2]/button".
+At the same time, the understanding that new elements have been added can be ignored because there are no such elements in the new version of the HTML.
+So, to fix the test case, you only need to change the xpath of the "新建子项目" element to "//*[@id="subprojects"]/div/div[2]/form[2]/button".
+The original test case is to click the "新建子项目" button, but based on the intent of the test, the test case should not test the deletion of a project, so the subsequent code should be kept unchanged.
+
+The fixed test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div/div[2]/form[2]/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-description"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/div[3]/input').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
+2024-04-09 22:51:02,574:INFO:The testcase 3-4 is generated:
+Based on the possible causes of test failure, you can find that the "新建子项目" button has been removed and the "添加为子项目" button has a different xpath. According to the error message, we can understand that it's the "新建子项目" button, and that it can be fixed by changing the xpath in the test case.
+By looking up the xpath of the "添加为子项目" button in the new version of the HTML, we can find that it is "//*[@id="subprojects"]/div/div[2]/form/fieldset/button[2]".
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button[2]').click()
+...
+
+In the new version of the HTML, there is no "新建子项目" button, but there are two buttons in the same form, so it can be inferred that the "添加为子项目" button in the test script may be corresponding to the second button in the test.
+The error message mentioned that it could not find "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button", but the repaired test case xpath is "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button[2]", which is not consistent with the error message.
+The repaired xpath is in the error message, so the test case can be fixed by modifying it according to the error message.
+At the same time, be aware that the subsequent test steps may need to be adjusted based on the new version of the HTML.
+
+The repaired test case is:
+...
+driver.find_element(By.XPATH, '//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button[2]').click()
+...
+2024-04-09 22:51:02,574:INFO:The testcase 3-5 is generated:
+By analyzing the new version of the HTML and understanding the intent of the test case, I found that in the new version of the HTML, there is a "新建子项目" button and an "添加为子项目" button in the form of a sibling relationship, and according to the test intent, it is indeed to test the function of adding subprojects, so the test code in the test case should be focused on these two buttons.
+So, in order to fix the test case, you need to change the xpath in the test code of the test case from "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button" to "//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/button".
+By looking at the error message, you can also know that the xpath is <"//*[@id="manage-project-update-subprojects-div"]/div/div[2]/form/fieldset/button">.
+It can be seen that the "新建子项目" button mentioned in the error message in the test case corresponds to the "添加为子项目" button in the new version of the HTML.
+In addition, by understanding the test case, I know that the subsequent test code in the test case is to enter the name and description of the subproject and then click the confirm button, and according to the new version of the HTML, the description input box has been removed and the confirm button has been changed to a "添加子项目" button.
+So to make the test case complete and consistent with the test intent, the test code that follows should be changed from '//*[@id="project-name"]' to '//*[@id="project-name"]', and from '//*[@id="project-description"]' to '//*[@id="project-name"]', and from '//*[@id="manage-project-create-form"]/div/div[3]/input' to '//*[@id="manage-project-create-form"]/div/button[2]'.
+And by looking at the new version of the HTML, I found that the xpath '//*[@id="navbar-container"]/div[2]/ul/li[3]/a' and '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a' are not found, so they may have been removed in the new version of the HTML, and to ensure that the test can run without errors, they should also be removed from the test case.
+
+The repaired test case is:
+driver = webdriver.Chrome()
+driver.get("http://localhost/mantisbt-2.26.0/")
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("administrator")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[2]').click()
+driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("admin")
+driver.find_element(By.XPATH, '//*[@id="login-form"]/fieldset/input[3]').click()
+# sleep(1)
+driver.find_element(By.LINK_TEXT, '管理').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="main-container"]/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/table/tbody/tr/td[1]/a').click()
+driver.find_element(By.XPATH, '//*[@id="subprojects"]/div/div[2]/form/button').click()
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="project-name"]').send_keys("test")
+driver.find_element(By.XPATH, '//*[@id="manage-project-create-form"]/div/button[2]').click()
+# sleep(1)
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/a').click()
+driver.find_element(By.XPATH, '//*[@id="navbar-container"]/div[2]/ul/li[3]/ul/li[4]/a').click()
+driver.close()
